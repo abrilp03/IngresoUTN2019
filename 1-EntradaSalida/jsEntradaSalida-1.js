@@ -2,5 +2,7 @@
 function Mostrar()
 {
 	alert("Esto funciona de maravilla");
+
+   
 }
 

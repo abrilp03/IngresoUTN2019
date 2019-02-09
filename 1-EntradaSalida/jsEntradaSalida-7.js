@@ -6,65 +6,57 @@ function sumar()
 {	
     var uno;
     var dos;
-    
-    uno = document.getElementById("numeroUno").value;
-    dos = document.getElementById("numeroDos").value;
 
-    uno = parseInt(uno);
-    dos = parseInt(dos);
+    uno = parseInt(document.getElementById("numeroUno").value);
+    dos = parseInt(document.getElementById("numeroDos").value);
 
     var suma = uno + dos;
 
-    alert("La suma es " + suma);
+    alert("El resultado de su suma es " + suma);
 
 }
 
 function restar()
 {
     var uno;
-    var dos; 
+    var dos;
 
-    uno = document.getElementById("numeroUno").value;
-    dos = document.getElementById("numeroDos").value;
+    uno = parseInt(document.getElementById("numeroUno").value);
+    dos = parseInt(document.getElementById("numeroDos").value);
 
-    uno = parseInt(uno);
-    dos = parseInt(dos);
+    var  resta = uno - dos;
 
-    var resta = uno - dos;
-
-    alert("La resta es " + resta);
+    alert ("El resultado de su resta es " + resta);
 
 }
 
 function multiplicar()
 { 
     var uno;
-    var dos; 
+    var dos;
+    var multiplicar;
 
-    uno = document.getElementById("numeroUno").value;
-    dos = document.getElementById("numeroDos").value;
-
-    uno = parseInt(uno);
-    dos = parseInt(dos);
+    uno = parseInt(document.getElementById("numeroUno").value);
+    dos = parseInt(document.getElementById("numeroDos").value);
 
     var multiplicar = uno * dos;
 
-    alert("La multipicación es " + multiplicar);
+    alert("El resultado de su multiplicación es " + multiplicar);
+	
 }
 
 function dividir()
 {
-	var uno;
-    var dos; 
+    var uno;
+    var dos;
+    var dividir;
 
-    uno = document.getElementById("numeroUno").value;
-    dos = document.getElementById("numeroDos").value;
-
-    uno = parseInt(uno);
-    dos = parseInt(dos);
+    uno = parseInt(document.getElementById("numeroUno").value);
+    dos = parseInt(document.getElementById("numeroDos").value);
 
     var dividir = uno / dos;
 
-    alert("La división es " + dividir);
+    alert("El resultado de su división es " + dividir);
+	
 }
 
