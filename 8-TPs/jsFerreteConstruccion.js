@@ -6,16 +6,18 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
-    var Largo;
-    var Ancho;
-    var Perimetro;
+    var largo;
+    var ancho;
+    var area;
+    var alambre;
 
-    Largo = parseFloat(document.getElementById("Largo").value);
-    Ancho = parseFloat(document.getElementById("Ancho").value);
+    largo = parseFloat(document.getElementById("Largo").value);
+    ancho = parseFloat(document.getElementById("Ancho").value);
 
-    Perimetro = Largo * 2 + Ancho * 2;
+    area = largo * 2 + ancho * 2;
+    alambre = area * 3;
 
-    alert("La cantidad de alambre a comprar es de " + Perimetro.toFixed(2));
+    alert("La cantidad de alambre a comprar es de: " + alambre + "m de alambre");
 
 }
 function Circulo () 
@@ -29,26 +31,24 @@ function Circulo ()
     perimetro = Math.PI * radio * 2;
     alambre = perimetro * 3;
 
-    alert("La cantidad a comprar de alambre es " + alambre.toFixed(2));
-
+    alert("La cantidad de alambre a comprar es de " + alambre.toFixed(2) + "de alambre")
 	
 }
 function Materiales () 
 {
     var largo;
     var ancho;
-    var cal;
-    var cemento;
     var superficie;
+    var cemento;
+    var cal;
 
     largo = parseFloat(document.getElementById("Largo").value);
     ancho = parseFloat(document.getElementById("Ancho").value);
 
-    superficie = largo * ancho;
-
+    superficie = largo * ancho,
     cemento = superficie * 2;
     cal = superficie * 3;
 
-    alert(" Si la superfie del terreno es " + superficie + "m2, se necesitan comprar " + cemento + " bolsas de cemento y " + cal + "  bolsas de cal.");
+    alert("Siendo la superficie del terreno " + superficie + " m². La cantidad a comprar de bolsas de cemento es de  " + cemento + " y la cantidad a comprar de bolsas de cal es de " + cal);
 	
 }

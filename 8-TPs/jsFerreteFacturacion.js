@@ -5,51 +5,53 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-    var PrecioUno;
-    var PrecioDos;
-    var PrecioTres;
+    var precio1;
+    var precio2;
+    var precio3;
+    var suma;
 
-    PrecioUno = parseFloat(document.getElementById("PrecioUno").value);
-    PrecioDos = parseFloat(document.getElementById("PrecioDos").value);
-    PrecioTres = parseFloat(document.getElementById("PrecioTres").value);
+    precio1 = parseFloat(document.getElementById("PrecioUno").value);
+    precio2 = parseFloat(document.getElementById("PrecioDos").value);
+    precio3 = parseFloat(document.getElementById("PrecioTres").value);
 
-    var Suma = PrecioUno + PrecioDos + PrecioTres;
+    suma = precio1 + precio2 + precio3;
 
-    alert("La suma total de los tres precios ingresados es de $" + Suma);
-	
+    alert("La suma de los tres precios ingresados es de $" + suma);
+
 }
 function Promedio () 
 {
-    var PrecioUno;
-    var PrecioDos;
-    var PrecioTres;
+    var precio1;
+    var precio2;
+    var precio3;
+    var promedio;
 
-    PrecioUno = parseFloat(document.getElementById("PrecioUno").value);
-    PrecioDos = parseFloat(document.getElementById("PrecioDos").value);
-    PrecioTres = parseFloat(document.getElementById("PrecioTres").value);
+    precio1 = parseFloat(document.getElementById("PrecioUno").value);
+    precio2 = parseFloat(document.getElementById("PrecioDos").value);
+    precio3 = parseFloat(document.getElementById("PrecioTres").value);
 
-    var promedio = (PrecioUno + PrecioDos + PrecioTres) / 3;
+    promedio = (precio1 + precio2 + precio3) / 3
 
-    alert("El promedio es de $ " + promedio.toFixed(2));
-
+    alert("El promedio entre los tres productos es de $" + promedio.toFixed(2));
+	
 }
 function PrecioFinal () 
 {
-    var PrecioUno;
-    var PrecioDos;
-    var PrecioTres;
-    var Iva;
-    var PrecioConIva;
-    var suma;
+    var precio1;
+    var precio2;
+    var precio3;
+    var preciofinal;
+    var IVA;
+    var precioFinalConIVA;
 
-    PrecioUno = parseFloat(document.getElementById("PrecioUno").value);
-    PrecioDos = parseFloat(document.getElementById("PrecioDos").value);
-    PrecioTres = parseFloat(document.getElementById("PrecioTres").value);
+    precio1 = parseFloat(document.getElementById("PrecioUno").value);
+    precio2 = parseFloat(document.getElementById("PrecioDos").value);
+    precio3 = parseFloat(document.getElementById("PrecioTres").value);
 
-     suma = PrecioUno + PrecioDos + PrecioTres;
-     Iva = suma * 21 / 100;
-     PrecioConIva = suma + Iva;
+    preciofinal = precio1 + precio2 + precio3;
+    IVA = preciofinal * 21 / 100;
+    precioFinalConIVA = preciofinal + IVA;
 
-     alert("El precio final con IVA es de $" + PrecioConIva);
-
+    alert("El precio total entre los tres productos con un IVA de 21% es de $" + precioFinalConIVA.toFixed(2));
+	
 }
