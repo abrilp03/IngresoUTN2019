@@ -15,6 +15,7 @@ function CalcularPrecio ()
     var marca;
     var descuento;
     var impuesto;
+    var ingresoBruto;
 
     cantidad = parseInt(document.getElementById("Cantidad").value);
     marca = document.getElementById("Marca").value;
@@ -69,9 +70,15 @@ function CalcularPrecio ()
 
         document.getElementById("precioDescuento").value = descuento.toFixed(2);
     }
-   
-    impuesto = descuento * 0.1 + descuento;
 
-    alert ("IIBB Usted pago $" + impuesto);
- 	
+   if ( descuento > 120 )
+   {
+    impuesto = descuento * 0.1;
+    ingresoBruto = impuesto + descuento;
+    
+    alert( "Usted pagó de IIBB $" + ingresoBruto);
+
+    document.getElementById("precioDescuento").value = descuento;
+   }
+    
 }
