@@ -10,23 +10,77 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-    var Lamparitas;
-    var Cantidad;
-    var Precio;
-    var Descuento;
-    var PrecioConDescuento;
+    var cantidad;
+    var precioCantidad;
+    var marca;
+    var precioConDescuento;
+    var ingresoBruto;
+    var impuesto;
+    var flag = 0;
 
-    Cantidad = parseInt(document.getElementById("Cantidad").value);
-    Lamparitas = 35;
+    cantidad = parseInt(document.getElementById("Cantidad").value);
+    marca = document.getElementById("Marca").value;
 
-    if ( Cantidad >= 6){
-        
-        Precio = Cantidad * Lamparitas;
-        Descuento = Precio * 50 / 100;
-        PrecioConDescuento = Precio - Descuento;
-        
-        document.getElementById("precioDescuento").value = PrecioConDescuento;
+    precioCantidad = cantidad * 35;
 
+    if ( cantidad >= 6)
+    {
+       precioConDescuento = precioCantidad * 50 / 100;
+    } 
+    else if ( cantidad == 5)
+    {
+        if ( marca == "ArgentinaLuz")
+        {
+            precioConDescuento = precioCantidad * 50 / 100;
+        }
+        else 
+        {
+            precioConDescuento = precioCantidad * 30 / 100;
+        }
     }
- 	
+    else if ( cantidad == 4)
+    {
+        if ( marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+        {
+            precioConDescuento = precioCantidad * 25 / 100;
+        }
+        else
+        {
+            precioConDescuento = precioCantidad * 20 / 100;
+        }
+    }
+    else if ( cantidad == 3)
+    {
+        if ( marca == "ArgentinaLuz")
+        {
+            precioConDescuento = precioCantidad * 15 / 100;
+        }
+        if ( marca == "FelipeLamparas")
+        {
+            precioConDescuento = precioCantidad * 10 / 100;
+        }
+        else 
+        {
+            precioConDescuento = precioCantidad * 5 / 100;
+        }
+    }
+    if ( precioConDescuento > 120 )
+    {
+        ingresoBruto = precioConDescuento * 10 / 100;
+        impuesto = precioConDescuento + ingresoBruto;
+        
+        flag = 1;
+    }
+
+    document.getElementById("precioDescuento").value = precioConDescuento;
+
+    if ( flag == 1 )
+    {
+        alert ("Impuesto a pagar $" + impuesto + ". Usted pagó $" + ingresoBruto + " de IIBB.");
+    }
+
+
+
+
+
 }
