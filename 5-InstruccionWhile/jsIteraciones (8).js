@@ -1,6 +1,6 @@
 function Mostrar()
 {
-
+	
 	var contador=0;
 	var positivo=0;
 	var negativo=1;
@@ -10,5 +10,4 @@ function Mostrar()
 
 document.getElementById('suma').value=positivo;
 document.getElementById('producto').value=negativo;
-
-}//FIN DE LA FUNCIÓN
+}

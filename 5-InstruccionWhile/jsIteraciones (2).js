@@ -1,12 +1,12 @@
 function Mostrar()
 {
-	var i = 1;
+	var i = 11;
 
-	while( i > 0 )
+	while( i > 1 )
 	{
-		console.log(i);
-
 		i--;
+
+		console.log(i);
 	}
 
 

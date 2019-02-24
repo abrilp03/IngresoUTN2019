@@ -1,16 +1,16 @@
 function Mostrar()
 {
+	var contador = 0;
+	var numero;
+	var maximo;
+	var minimo;
+	var respuesta = "si";
 
-	var contador=0;
-	// declarar variables
-	
-	var respuesta='si';
-
-	while(respuesta!='no')
+	do
 	{
-		
-	
-	}
+		numero = parseInt(prompt("Ingrese un número"));
+
+	}while(respuesta == "si");
 
 
 
