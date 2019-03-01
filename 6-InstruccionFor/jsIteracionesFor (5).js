@@ -4,7 +4,7 @@ function Mostrar()
 
     num = parseInt(prompt("Ingrese un numero"));
 
-    for ( var i = 1; i < num; i++)
+    for ( var i = 0; i < num; i++)
     {
         num = parseInt(prompt("Ingrese un numero"));
 
